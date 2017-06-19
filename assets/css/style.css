@@ -1,0 +1,27 @@
+.container {
+  margin: auto;
+  max-width: 970px;
+  background-image: url("../images/thomas_full.png");
+  background-position: top;
+  font-family: asap, georgia, serif;
+}
+
+.jumbotron {
+	background-image: url("../images/filled_thomas.png");
+	background-color: #245085;
+	background-size: auto 96%;
+	background-repeat: no-repeat;	
+	color: white;
+}	
+
+h1 {
+	padding-left: 300px;
+}
+
+h2 {
+	padding-left: 325px;
+}
+
+
+
+/*url("../images/candles.jpg")*/
