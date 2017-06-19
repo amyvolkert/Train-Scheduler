@@ -1,8 +1,8 @@
 .container {
   margin: auto;
   max-width: 970px;
-  background-image: url("../images/thomas_full.png");
-  background-position: top;
+ /* background-image: url("../images/thomas_full.png");
+  background-position: top;*/
   font-family: asap, georgia, serif;
 }
 
@@ -20,6 +20,13 @@ h1 {
 
 h2 {
 	padding-left: 325px;
+}
+
+.panel > .panel-heading {
+	/*background-color: #FFD67B;*/
+}
+.btn-success {
+	font-size: 18px;
 }
 
 

@@ -1,10 +1,7 @@
 <!--Homework #7: Train Scheduler -->
 
 <!-- Psuedocode -->
-<!-- Style using Bootstrap Tables (w3schools) AND graphics and glyphicons -->
-<!-- done Add Moment JS -->
-<!-- done Add external JS -->
-<!-- done Add external CSS -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +9,7 @@
 	<meta charset="utf-8">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>Train Scheduler</title>
-	<!-- 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 	<!-- Added Moment JS -->
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<!-- Added external JS -->
@@ -33,22 +30,22 @@
 	<!-- Table responsive to scroll horizontally on small devices -->
 	<div class="table-responsive">
 		<!-- Row 1: Column Headings -->
-		</div class="row">
+		<div class="row">
 		<div class="col-lg-12">
-		<!-- Current Train Schedule -->
-		<!-- Adding panel and its content -->
+		<!-- Train schedule to be populated by user input -->
+		<!-- Panel with title -->
 		<div class="panel panel-primary">
 			<div class="panel-heading">
 				<p class="panel-title"><strong>Schedule</strong></p>
 			</div>
-			<!-- Adding panel body via a table -->
+			<!-- Panel body via a table -->
 			<div class="panel-body">
 				<table class="table bordered">
-					<!-- Grouping header content -->
+					<!-- Table content -->
 					<thead>
 						<!-- Defining the row -->
 						<tr>
-							<!--Adding header content -->
+							<!--Header content -->
 							<th>Train</th>
 							<th>Destination</th>
 							<th>How Often</th>
@@ -56,12 +53,52 @@
 							<th>Minutes Away</th>
 						</tr>
 					</thead>	
+				</table>	
+			<!-- Panel body ends -->
+			</div>	
+		<!-- Primary panel ends -->
+		</div>
+			
+		<!--Add a train -->
+		<div class="panel panel-primary">
+				<div class="panel-heading" >
+					<p class="panel-title"><strong>Add Train</strong></p>
+				</div>
+				<!-- Panel body via a table -->
+				<div class="panel-body">
+				<!-- Entry Form containing four element inputs -->
+				<form>
+					<!-- First element input: Train Name -->
+					<div class="form-group">
+						<label for="train-name-input">Train Name</label>
+						<input class="form-control" id="train-name-input" type="text">
+					</div>
+					<!-- Second element input: Destination -->
+					<div class="form-group">
+						<label for="destination-name-input">Destination</label>
+						<input class="form-control" id="destination-name-input" type="text">
+					</div>
+					<!-- Third element input: First train time -->
+					<div class="form-group">
+						<label for="first-time">First Train Time</label>
+						<input class="form-control" id="first-time-input" type="text">
+					</div>
+					<!-- Fourth element input: Frequency in minutes -->
+					<div class="form-group">
+						<label for="frequency-name-input">How Often (minutes)</label>
+						<input class="form-control" id="frequency-name-input" type="text">
+					</div>
+					<!-- Submit button -->
+					<button class="btn btn-success" type="submit">Submit</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	<!-- table responsive ends -->
+	</div>	
+	<!-- container ends -->
+	</div>
 
-
-
-
-
-	
 </body>
 </html>
 
