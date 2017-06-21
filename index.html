@@ -1,6 +1,8 @@
 <!--Homework #7: Train Scheduler -->
 
 <!-- Psuedocode -->
+<!-- Add sound effects of Thomas, Gordon, or Henry (Alec Baldwin) -->
+<!-- Add sound effects for clickable buttons or trains with trains' voices -->
 
 
 <!DOCTYPE html>
@@ -9,9 +11,11 @@
 	<meta charset="utf-8">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<title>Train Scheduler</title>
-	<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!-- Added Moment JS -->
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!--Added Firebase JS -->
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 	<!-- Added external JS -->
 	<script src="logic.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -36,23 +40,25 @@
 		<!-- Panel with title -->
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<p class="panel-title"><strong>Schedule</strong></p>
+				<p class="panel-title"><strong>Awesome Train Schedule</strong></p>
 			</div>
 			<!-- Panel body via a table -->
 			<div class="panel-body">
-				<table class="table bordered">
-					<!-- Table content -->
-					<thead>
-						<!-- Defining the row -->
-						<tr>
-							<!--Header content -->
-							<th>Train</th>
-							<th>Destination</th>
-							<th>How Often</th>
-							<th>Next Arrival</th>
-							<th>Minutes Away</th>
-						</tr>
-					</thead>	
+				<table class="table bordered" id="train-table">
+						<!-- Table content -->
+						<thead>
+							<!-- Defining the row -->
+							<tr>
+								<!--Header content -->
+								<th>Train</th>
+								<th>Destination</th>
+								<th>How Often</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+					<tbody>
+					</tbody>	
 				</table>	
 			<!-- Panel body ends -->
 			</div>	
@@ -75,21 +81,21 @@
 					</div>
 					<!-- Second element input: Destination -->
 					<div class="form-group">
-						<label for="destination-name-input">Destination</label>
-						<input class="form-control" id="destination-name-input" type="text">
+						<label for="destination-input">Destination</label>
+						<input class="form-control" id="destination-input" type="text">
 					</div>
 					<!-- Third element input: First train time -->
 					<div class="form-group">
-						<label for="first-time">First Train Time</label>
+						<label for="first-time-input">First Train Time </label>
 						<input class="form-control" id="first-time-input" type="text">
 					</div>
 					<!-- Fourth element input: Frequency in minutes -->
 					<div class="form-group">
-						<label for="frequency-name-input">How Often (minutes)</label>
-						<input class="form-control" id="frequency-name-input" type="text">
+						<label for="frequency-input">How Often (minutes)</label>
+						<input class="form-control" id="frequency-input" type="text">
 					</div>
 					<!-- Submit button -->
-					<button class="btn btn-success" type="submit">Submit</button>
+					<button class="btn btn-success" id="add-train-btn" type="submit">Submit</button>
 				</form>
 				</div>
 			</div>
